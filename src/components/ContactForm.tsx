@@ -10,7 +10,7 @@ interface FormData {
 }
 
 const ContactForm = () => {
-  const { toast } = useToast();
+  const { showToast } = useToast();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -76,7 +76,7 @@ const ContactForm = () => {
       });
       
       if (response.ok) {
-        toast({
+        showToast({
           title: 'Message sent!',
           description: 'We will get back to you within 24 hours.',
           status: 'success'
@@ -91,7 +91,7 @@ const ContactForm = () => {
         throw new Error('Failed to send message');
       }
     } catch (error) {
-      toast({
+      showToast({
         title: 'Error',
         description: 'There was an error sending your message. Please try again later.',
         status: 'error'

@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { ChevronRight, Bot, Menu } from 'lucide-react';
+import { useState } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
 import logo from "../assets/logo.png"
 
@@ -64,7 +63,7 @@ const Navbar = () => {
         isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}>
         <div className="container mx-auto px-6 py-6 space-y-4">
-          {['Home', 'Services', 'About', 'Why AI', 'Testimonials', 'Contact'].map((item, index) => (
+          {['Home', 'Services', 'About', 'Why AI', 'Testimonials', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
