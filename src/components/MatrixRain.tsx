@@ -8,13 +8,14 @@ const MatrixRain = () => {
       {[...Array(20)].map((_, i) => (
         <div
           key={i}
-          className="absolute text-green-400 text-xs font-mono"
+          className="absolute text-xs font-mono"
           style={{
             left: `${i * 5}%`,
             top: `-20px`,
             animation: `matrixRain ${3 + Math.random() * 2}s linear infinite`,
             animationDelay: `${i * 0.5}s`,
-            transform: `translateY(${scrollY * 0.3}px)`
+            transform: `translateY(${scrollY * 0.3}px)`,
+            color: '#AD2831'
           }}
         >
           {['01', '10', '11', '00'][Math.floor(Math.random() * 4)]}

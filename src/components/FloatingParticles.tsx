@@ -12,7 +12,7 @@ const FloatingParticles = () => {
         return (
           <div
             key={i}
-            className="absolute rounded-full bg-gradient-to-r from-green-400 to-cyan-400"
+            className="absolute rounded-full"
             style={{
               width: `${size}px`,
               height: `${size}px`,
@@ -20,7 +20,8 @@ const FloatingParticles = () => {
               top: `${Math.random() * 100}%`,
               animation: `float ${duration}s linear infinite`,
               animationDelay: `${delay}s`,
-              opacity: opacity
+              opacity: opacity,
+              background: '#AD2831'
             }}
           />
         );

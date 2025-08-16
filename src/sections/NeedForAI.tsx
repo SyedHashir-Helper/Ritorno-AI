@@ -26,7 +26,7 @@ const NeedForAI = () => {
     {
       title: "Data-Driven Decisions",
       description: "Get actionable insights from your data with AI-powered analytics and predictions",
-      icon: "🔍"
+      icon: "📊"
     }
   ];
 
@@ -34,10 +34,11 @@ const NeedForAI = () => {
     <section id="why-ai" className="py-24 bg-gradient-to-b from-black via-gray-900/10 to-black relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 bg-gray-800/50 border border-purple-400/30 rounded-full mb-6">
-            <span className="text-purple-400 text-sm font-semibold">🤖 AI Advantage</span>
+          <div className="inline-block px-4 py-2 bg-gray-800/50 border rounded-full mb-6"
+               style={{ borderColor: '#AD2831' }}>
+            <span className="text-sm font-semibold" style={{ color: '#AD2831' }}>🤖 AI Advantage</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             WHY YOUR BUSINESS NEEDS AI
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto">
@@ -52,10 +53,10 @@ const NeedForAI = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-block p-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-xl border border-gray-800">
+          <div className="inline-block p-1 bg-gray-900/70 rounded-xl border border-gray-800">
             <div className="px-6 py-4 bg-gray-900/70 rounded-lg">
               <p className="text-gray-300 text-lg">
-                <span className="text-purple-400 font-semibold">87% of CEOs</span> say AI is becoming essential to maintaining competitiveness (PwC 2024 AI Survey)
+                <span className="font-semibold" style={{ color: '#AD2831' }}>87% of CEOs</span> say AI is becoming essential to maintaining competitiveness (PwC 2024 AI Survey)
               </p>
             </div>
           </div>
@@ -67,16 +68,23 @@ const NeedForAI = () => {
 
 const BenefitCard = ({ benefit, index }: { benefit: Benefit; index: number }) => (
   <div
-    className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
+    className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-opacity-50 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
     style={{ animationDelay: `${index * 0.1}s` }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.borderColor = '#AD2831';
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.borderColor = '#1f2937';
+    }}
   >
     <div className="relative z-10">
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-400/30 flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform duration-300">
+      <div className="w-16 h-16 rounded-2xl bg-gray-800/50 border flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform duration-300"
+           style={{ borderColor: '#AD2831' }}>
         {benefit.icon}
       </div>
       <h3 className="text-2xl font-bold text-white mb-3">{benefit.title}</h3>
       <p className="text-gray-300 mb-6 leading-relaxed">{benefit.description}</p>
-      <div className="flex items-center text-purple-400 font-semibold">
+      <div className="flex items-center font-semibold" style={{ color: '#AD2831' }}>
         Learn more <ChevronRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
       </div>
     </div>

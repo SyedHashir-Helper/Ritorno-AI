@@ -21,16 +21,16 @@ const Toast = ({ toast, onClose }: ToastProps) => {
   if (!toast) return null;
 
   const statusIcons = {
-    success: <CheckCircle2 className="w-5 h-5 text-green-400" />,
+    success: <CheckCircle2 className="w-5 h-5" style={{ color: '#AD2831' }} />,
     error: <AlertCircle className="w-5 h-5 text-red-400" />,
-    info: <Info className="w-5 h-5 text-blue-400" />,
+    info: <Info className="w-5 h-5" style={{ color: '#AD2831' }} />,
     warning: <AlertTriangle className="w-5 h-5 text-yellow-400" />
   };
 
   const statusColors = {
-    success: 'bg-green-900/30 border-green-800',
+    success: 'bg-gray-900/90 border-gray-700',
     error: 'bg-red-900/30 border-red-800',
-    info: 'bg-blue-900/30 border-blue-800',
+    info: 'bg-gray-900/90 border-gray-700',
     warning: 'bg-yellow-900/30 border-yellow-800'
   };
 

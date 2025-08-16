@@ -1,4 +1,4 @@
-import { Bot } from 'lucide-react';
+import logo from "../assets/r-logo.png"
 
 const Footer = () => {
   return (
@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-cyan-400 rounded-xl flex items-center justify-center">
-                <Bot className="w-7 h-7 text-black" />
+              <div className="relative w-15 h-10 rounded-xl flex items-center justify-center group">
+                <img src={logo}/>
               </div>
-              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Ritorno AI
               </span>
             </div>
@@ -57,10 +57,18 @@ const Footer = () => {
 
 const SocialIcon = ({ social }: { social: string }) => (
   <div 
-    className="w-10 h-10 bg-gray-800 hover:bg-green-400/20 border border-gray-700 hover:border-green-400/50 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group"
+    className="w-10 h-10 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group"
     onClick={() => window.open(`https://${social.toLowerCase()}.com/ritornoai`, '_blank')}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = 'rgba(173, 40, 49, 0.2)';
+      e.currentTarget.style.borderColor = '#AD2831';
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = '#1f2937';
+      e.currentTarget.style.borderColor = '#374151';
+    }}
   >
-    <span className="text-gray-400 group-hover:text-green-400 text-sm font-semibold">{social[0]}</span>
+    <span className="text-gray-400 group-hover:text-white text-sm font-semibold">{social[0]}</span>
   </div>
 );
 
@@ -72,7 +80,13 @@ const FooterLinks = ({ title, links }: { title: string; links: string[] }) => (
         <li key={link}>
           <a 
             href={`#${link.toLowerCase().replace(' ', '-')}`} 
-            className="text-gray-400 hover:text-green-400 transition-colors"
+            className="text-gray-400 hover:text-white transition-colors"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = '#AD2831';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = '#9ca3af';
+            }}
           >
             {link}
           </a>
@@ -83,7 +97,14 @@ const FooterLinks = ({ title, links }: { title: string; links: string[] }) => (
 );
 
 const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a href={href} className="text-gray-400 hover:text-green-400 transition-colors">
+  <a href={href} 
+     className="text-gray-400 hover:text-white transition-colors"
+     onMouseEnter={(e) => {
+       e.currentTarget.style.color = '#AD2831';
+     }}
+     onMouseLeave={(e) => {
+       e.currentTarget.style.color = '#9ca3af';
+     }}>
     {children}
   </a>
 );

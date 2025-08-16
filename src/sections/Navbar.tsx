@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
-import logo from "../assets/logo.png"
+import logo from "../assets/r-logo.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +22,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="relative w-12 h-10 rounded-xl flex items-center justify-center group">
-              {/* <Bot className="w-6 h-6 text-black group-hover:scale-110 transition-transform duration-300" /> */}
+            <div className="relative w-15 h-10 rounded-xl flex items-center justify-center group">
               <img src={logo}/>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               RITORNO AI
             </span>
           </div>
@@ -67,7 +66,13 @@ const Navbar = () => {
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-              className="block text-gray-300 hover:text-green-400 transition-colors py-2 text-left w-full"
+              className="block text-gray-300 hover:text-white transition-colors py-2 text-left w-full"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#AD2831';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#d1d5db';
+              }}
             >
               {item}
             </button>
@@ -84,19 +89,28 @@ const NavItem = ({ id, activeSection, onClick }: { id: string, activeSection: st
   return (
     <button
       onClick={() => onClick(id)}
-      className={`text-gray-300 hover:text-green-400 transition-all duration-300 relative group px-2 py-1 ${
-        activeSection === id ? 'text-green-400' : ''
+      className={`text-gray-300 hover:text-white transition-all duration-300 relative group px-2 py-1 ${
+        activeSection === id ? '' : ''
       }`}
+      style={activeSection === id ? { color: '#AD2831' } : {}}
+      onMouseEnter={(e) => {
+        if (activeSection !== id) {
+          e.currentTarget.style.color = '#AD2831';
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (activeSection !== id) {
+          e.currentTarget.style.color = '#d1d5db';
+        }
+      }}
     >
       {displayName}
-      <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-green-400 to-cyan-400 transition-all duration-300 ${
+      <span className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
         activeSection === id ? 'w-full' : 'w-0 group-hover:w-full'
-      }`}></span>
+      }`}
+      style={{ backgroundColor: '#AD2831' }}></span>
     </button>
   );
 };
 
-
 export default Navbar;
-
-

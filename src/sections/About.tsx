@@ -1,3 +1,4 @@
+// About.tsx
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import sideImg from "../assets/image.png"
@@ -9,10 +10,11 @@ const About = () => {
     <section id="about" className="py-24 bg-gradient-to-b from-black via-gray-900/10 to-black relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-2 bg-gray-800/50 border border-orange-400/30 rounded-full mb-6">
-            <span className="text-orange-400 text-sm font-semibold">👨‍💻 Leadership</span>
+          <div className="inline-block px-4 py-2 bg-gray-800/50 border rounded-full mb-6"
+               style={{ borderColor: '#AD2831' }}>
+            <span className="text-sm font-semibold" style={{ color: '#AD2831' }}>👨‍💻 Leadership</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             ABOUT US
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto">
@@ -25,24 +27,18 @@ const About = () => {
             <TabButton
               active={activeTab === 'about'}
               onClick={() => setActiveTab('about')}
-              gradient="from-orange-500/20 to-yellow-500/20"
-              textColor="text-orange-400"
             >
               About
             </TabButton>
             <TabButton
               active={activeTab === 'mission'}
               onClick={() => setActiveTab('mission')}
-              gradient="from-orange-500/20 to-yellow-500/20"
-              textColor="text-orange-400"
             >
               Mission
             </TabButton>
             <TabButton
               active={activeTab === 'vision'}
               onClick={() => setActiveTab('vision')}
-              gradient="from-orange-500/20 to-yellow-500/20"
-              textColor="text-orange-400"
             >
               Vision
             </TabButton>
@@ -51,12 +47,18 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+            <div className="absolute inset-0 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
+                 style={{ backgroundColor: 'rgba(173, 40, 49, 0.2)' }}></div>
             <div className="relative w-full max-w-md mx-auto">
-              <div className="aspect-square bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-3xl overflow-hidden border-2 border-gray-700 group-hover:border-green-400/50 transition-all duration-300">
-                {/* Image Placeholder */}
+              <div className="aspect-square bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-3xl overflow-hidden border-2 border-gray-700 group-hover:border-opacity-50 transition-all duration-300"
+                   onMouseEnter={(e) => {
+                     e.currentTarget.style.borderColor = '#AD2831';
+                   }}
+                   onMouseLeave={(e) => {
+                     e.currentTarget.style.borderColor = '#374151';
+                   }}>
                 <img
-                  src={sideImg} // Replace with your image path
+                  src={sideImg}
                   alt="Founder"
                   className="w-full h-full object-cover"
                 />
@@ -68,7 +70,8 @@ const About = () => {
             {activeTab === 'about' && (
               <>
                 <div className="group">
-                  <h3 className="text-2xl font-bold mb-4 text-green-400 group-hover:text-green-300 transition-colors">
+                  <h3 className="text-2xl font-bold mb-4 group-hover:opacity-80 transition-colors"
+                      style={{ color: '#AD2831' }}>
                     Syed Hashir Husnain - Founder
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-lg">
@@ -83,7 +86,8 @@ const About = () => {
                 </div>
 
                 <div className="group">
-                  <h3 className="text-2xl font-bold mb-4 text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-2xl font-bold mb-4 group-hover:opacity-80 transition-colors"
+                      style={{ color: '#AD2831' }}>
                     Ritorno AI - Innovation Hub
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-lg">
@@ -106,28 +110,29 @@ const About = () => {
 const TabButton = ({
   children,
   active,
-  onClick,
-  gradient,
-  textColor
+  onClick
 }: {
   children: React.ReactNode;
   active: boolean;
   onClick: () => void;
-  gradient: string;
-  textColor: string;
 }) => (
   <button
     onClick={onClick}
-    className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${active ? `${gradient} ${textColor}` : 'text-gray-400 hover:text-white'
-      }`}
+    className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+      active 
+        ? 'text-white' 
+        : 'text-gray-400 hover:text-white'
+    }`}
+    style={active ? { backgroundColor: '#AD2831' } : {}}
   >
     {children}
   </button>
 );
 
 const MissionTab = () => (
-  <div className="p-8 bg-gray-900/50 rounded-2xl border border-orange-400/30 transition-all duration-300">
-    <h3 className="text-3xl font-bold text-orange-400 mb-6">Our Mission</h3>
+  <div className="p-8 bg-gray-900/50 rounded-2xl border transition-all duration-300"
+       style={{ borderColor: '#AD2831' }}>
+    <h3 className="text-3xl font-bold mb-6" style={{ color: '#AD2831' }}>Our Mission</h3>
     <p className="text-gray-300 leading-relaxed text-lg mb-6">
       To democratize advanced AI technology, making intelligent automation accessible to businesses
       of all sizes while driving unprecedented efficiency and innovation.
@@ -142,7 +147,7 @@ const MissionTab = () => (
 
 const MissionItem = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start">
-    <div className="flex-shrink-0 mt-1 mr-4 text-orange-400">
+    <div className="flex-shrink-0 mt-1 mr-4" style={{ color: '#AD2831' }}>
       <ChevronRight className="w-5 h-5" />
     </div>
     <p className="text-gray-300">{children}</p>
@@ -150,8 +155,9 @@ const MissionItem = ({ children }: { children: React.ReactNode }) => (
 );
 
 const VisionTab = () => (
-  <div className="p-8 bg-gray-900/50 rounded-2xl border border-yellow-400/30 transition-all duration-300">
-    <h3 className="text-3xl font-bold text-yellow-400 mb-6">Our Vision</h3>
+  <div className="p-8 bg-gray-900/50 rounded-2xl border transition-all duration-300"
+       style={{ borderColor: '#AD2831' }}>
+    <h3 className="text-3xl font-bold mb-6" style={{ color: '#AD2831' }}>Our Vision</h3>
     <p className="text-gray-300 leading-relaxed text-lg mb-6">
       Pioneer the future of AI-powered business transformation, creating autonomous ecosystems
       that amplify human potential and drive sustainable growth globally.
@@ -166,7 +172,7 @@ const VisionTab = () => (
 
 const VisionItem = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start">
-    <div className="flex-shrink-0 mt-1 mr-4 text-yellow-400">
+    <div className="flex-shrink-0 mt-1 mr-4" style={{ color: '#AD2831' }}>
       <ChevronRight className="w-5 h-5" />
     </div>
     <p className="text-gray-300">{children}</p>

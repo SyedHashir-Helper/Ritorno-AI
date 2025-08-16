@@ -7,7 +7,7 @@ const NeuralNetwork = () => (
             cx={50 + (i % 5) * 200}
             cy={100 + Math.floor(i / 5) * 200}
             r="4"
-            fill="#10b981"
+            fill="#AD2831"
             className="animate-pulse"
             style={{ animationDelay: `${i * 0.3}s` }}
           />
@@ -17,7 +17,7 @@ const NeuralNetwork = () => (
               y1={100 + Math.floor(i / 5) * 200}
               x2={50 + ((i + 5) % 5) * 200}
               y2={100 + Math.floor((i + 5) / 5) * 200}
-              stroke="#06d6a0"
+              stroke="#AD2831"
               strokeWidth="1"
               className="animate-pulse"
               style={{ animationDelay: `${i * 0.2}s` }}
