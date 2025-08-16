@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
-import logo from "../assets/logo-i.png"
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,5 +95,6 @@ const NavItem = ({ id, activeSection, onClick }: { id: string, activeSection: st
     </button>
   );
 };
+
 
 export default Navbar;
