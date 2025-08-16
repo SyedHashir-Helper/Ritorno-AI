@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="relative w-20 h-10 rounded-xl flex items-center justify-center group">
+            <div className="relative w-12 h-10 rounded-xl flex items-center justify-center group">
               {/* <Bot className="w-6 h-6 text-black group-hover:scale-110 transition-transform duration-300" /> */}
               <img src={logo}/>
             </div>
@@ -98,3 +98,4 @@ const NavItem = ({ id, activeSection, onClick }: { id: string, activeSection: st
 
 
 export default Navbar;
+
