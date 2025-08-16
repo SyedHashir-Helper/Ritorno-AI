@@ -138,19 +138,8 @@ const ContactForm = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 p-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Get In <span style={{ color: '#AD2831' }}>Touch</span>
-          </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Ready to transform your business with AI automation? Let's start the conversation.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-6">
-            
-
             <div className="group">
               <label htmlFor="name" className="block text-gray-400 text-sm mb-2">
                 Your Name *
@@ -338,3 +327,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
