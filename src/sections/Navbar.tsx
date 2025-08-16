@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
-import logo from "../assets/logo.png"
+import logo from "../assets/logo-i.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +22,11 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="relative w-12 h-12 rounded-xl flex items-center justify-center group">
+            <div className="relative w-20 h-10 rounded-xl flex items-center justify-center group">
               {/* <Bot className="w-6 h-6 text-black group-hover:scale-110 transition-transform duration-300" /> */}
               <img src={logo}/>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-800 to-cyan-400 bg-clip-text text-transparent">
               RITORNO AI
             </span>
           </div>
