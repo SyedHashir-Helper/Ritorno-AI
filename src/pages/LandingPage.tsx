@@ -36,7 +36,7 @@ const LandingPage = () => {
               </p>
             </div>
             
-            <ContactForm />
+            
           </div>
         </section>
       </main>
@@ -48,3 +48,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
