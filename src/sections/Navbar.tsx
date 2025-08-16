@@ -26,7 +26,7 @@ const Navbar = () => {
               {/* <Bot className="w-6 h-6 text-black group-hover:scale-110 transition-transform duration-300" /> */}
               <img src={logo}/>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-800 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               RITORNO AI
             </span>
           </div>
@@ -98,4 +98,5 @@ const NavItem = ({ id, activeSection, onClick }: { id: string, activeSection: st
 
 
 export default Navbar;
+
 
