@@ -10,9 +10,7 @@ const CtaBanner = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
-          BUILD YOUR AI-POWERED
-          <br />
-          FUTURE TODAY
+          Ready to Build Your AI-Powered Future?
         </h2>
         <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
           Ready to <span className="font-semibold" style={{ color: '#AD2831' }}>10X your efficiency</span>, 
@@ -35,7 +33,7 @@ const CtaBanner = () => {
           }}
         >
           <span className="relative z-10 flex items-center">
-            Schedule Strategic Call
+            Schedule a Strategic Call
             <ChevronRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
           </span>
           

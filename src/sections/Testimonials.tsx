@@ -50,7 +50,7 @@ const Testimonials = () => {
             <span className="text-sm font-semibold" style={{ color: '#AD2831' }}>⭐ Success Stories</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            CLIENT RESULTS
+            What Our Clients Say
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto">
             Real businesses, real transformations, real ROI through our AI solutions

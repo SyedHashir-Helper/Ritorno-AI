@@ -15,6 +15,11 @@ interface FormData {
   message: string;
 }
 
+interface EmailJS {
+  init: (publicKey: string) => void;
+  send: (serviceId: string, templateId: string, templateParams: Record<string, unknown>) => Promise<{ status: number; text: string }>;
+}
+
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -28,17 +33,17 @@ const ContactForm = () => {
 
   // Load EmailJS script dynamically
   const loadEmailJS = () => {
-    return new Promise((resolve, reject) => {
-      if ((window as any).emailjs) {
-        resolve((window as any).emailjs);
+    return new Promise<EmailJS>((resolve, reject) => {
+      if ((window as { emailjs?: EmailJS }).emailjs) {
+        resolve((window as { emailjs: EmailJS }).emailjs);
         return;
       }
 
       const script = document.createElement('script');
       script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
       script.onload = () => {
-        (window as any).emailjs.init(EMAILJS_CONFIG.publicKey);
-        resolve((window as any).emailjs);
+        (window as { emailjs: EmailJS }).emailjs.init(EMAILJS_CONFIG.publicKey);
+        resolve((window as { emailjs: EmailJS }).emailjs);
       };
       script.onerror = reject;
       document.head.appendChild(script);
@@ -96,7 +101,7 @@ const ContactForm = () => {
     
     try {
       // Load EmailJS if not already loaded
-      await loadEmailJS();
+      const emailjs = await loadEmailJS();
       
       // Prepare template parameters
       const templateParams = {
@@ -110,7 +115,7 @@ const ContactForm = () => {
       };
       
       // Send email using EmailJS
-      const response = await (window as any).emailjs.send(
+      const response = await emailjs.send(
         EMAILJS_CONFIG.serviceId,
         EMAILJS_CONFIG.templateId,
         templateParams

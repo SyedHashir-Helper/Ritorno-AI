@@ -18,7 +18,7 @@ const About = () => {
             ABOUT US
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto">
-            Learn about our vision, mission, and the team behind Ritorno AI
+            Learn about our story, our mission, and the dedicated team that is committed to revolutionizing the AI landscape.
           </p>
         </div>
 
@@ -72,16 +72,13 @@ const About = () => {
                 <div className="group">
                   <h3 className="text-2xl font-bold mb-4 group-hover:opacity-80 transition-colors"
                       style={{ color: '#AD2831' }}>
-                    Syed Hashir Husnain - Founder
+                    Our Agency - Innovation Hub
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    With 1.5+ years of hands-on experience in AI engineering, I've specialized in building
-                    intelligent automation systems and custom ML solutions. My expertise spans workflow automation,
-                    autonomous AI agents, and deploying production-grade machine learning models.
+                    We are a team of passionate AI engineers, data scientists, and software developers dedicated to building intelligent automation systems and custom ML solutions. Our expertise spans workflow automation, autonomous AI agents, and deploying production-grade machine learning models.
                   </p>
                   <p className="text-gray-300 leading-relaxed text-lg mt-4">
-                    I founded Ritorno AI to help businesses leverage these cutting-edge technologies to achieve
-                    operational excellence and sustainable growth.
+                    We help businesses leverage cutting-edge technologies to achieve operational excellence and sustainable growth.
                   </p>
                 </div>
 
@@ -91,7 +88,7 @@ const About = () => {
                     Ritorno AI - Innovation Hub
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    Premier AI consultancy specializing in enterprise-grade automation, autonomous agents, and custom ML/DL solutions.
+                    Premier AI consultancy specializing in enterprise-grade automation, autonomous agents, and custom ML/DL solutions. We also offer expert services in web and app development, computer vision, and desktop applications.
                     We engineer intelligent systems that scale infinitely and adapt continuously to your evolving business needs.
                   </p>
                 </div>

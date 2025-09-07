@@ -9,24 +9,24 @@ interface Benefit {
 const NeedForAI = () => {
   const benefits: Benefit[] = [
     {
-      title: "Eliminate Repetitive Tasks",
-      description: "Free your team from mundane work with AI automation handling repetitive processes 24/7",
-      icon: "🔄"
+      title: "Expert Team",
+      description: "Our team consists of experienced AI engineers, data scientists, and software developers who are passionate about what they do.",
+      icon: "👨‍💻"
     },
     {
-      title: "Reduce Operational Costs",
-      description: "Cut expenses by up to 70% by automating manual workflows and reducing human error",
-      icon: "💰"
+      title: "Custom Solutions",
+      description: "We don't believe in one-size-fits-all. We work closely with you to understand your unique needs and build custom solutions.",
+      icon: "🔧"
     },
     {
-      title: "Scale Without Limits",
-      description: "AI systems handle increasing workloads without proportional increases in costs",
-      icon: "📈"
+      title: "Proven Track Record",
+      description: "We have a proven track record of delivering successful AI projects for clients across various industries.",
+      icon: "🏆"
     },
     {
-      title: "Data-Driven Decisions",
-      description: "Get actionable insights from your data with AI-powered analytics and predictions",
-      icon: "📊"
+      title: "Customer-Centric Approach",
+      description: "We are committed to your success. We provide ongoing support and maintenance to ensure your AI systems are running smoothly.",
+      icon: "🤝"
     }
   ];
 
@@ -39,10 +39,10 @@ const NeedForAI = () => {
             <span className="text-sm font-semibold" style={{ color: '#AD2831' }}>🤖 AI Advantage</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            WHY YOUR BUSINESS NEEDS AI
+            WHY CHOOSE US
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto">
-            The competitive landscape is shifting. Businesses not adopting AI will be left behind.
+            We are more than just a technology provider. We are your strategic partner in your AI transformation journey.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ const NeedForAI = () => {
           <div className="inline-block p-1 bg-gray-900/70 rounded-xl border border-gray-800">
             <div className="px-6 py-4 bg-gray-900/70 rounded-lg">
               <p className="text-gray-300 text-lg">
-                <span className="font-semibold" style={{ color: '#AD2831' }}>87% of CEOs</span> say AI is becoming essential to maintaining competitiveness (PwC 2024 AI Survey)
+                <span className="font-semibold" style={{ color: '#AD2831' }}>100%</span> Customer Satisfaction
               </p>
             </div>
           </div>
@@ -65,6 +65,7 @@ const NeedForAI = () => {
     </section>
   );
 };
+
 
 const BenefitCard = ({ benefit, index }: { benefit: Benefit; index: number }) => (
   <div

@@ -1,4 +1,4 @@
-import { ChevronRight, Bot, Cpu, Database, Network } from 'lucide-react';
+import { ChevronRight, Bot, Cpu, Database, Network, Globe, Smartphone, Camera, Monitor } from 'lucide-react';
 import type { JSX } from 'react';
 
 interface Service {
@@ -15,29 +15,57 @@ const Services = () => {
       icon: <Bot className="w-10 h-10" />,
       title: "AI Automation",
       subtitle: "n8n & make.com",
-      description: "Revolutionary workflow automation that transforms manual processes into intelligent, self-executing systems.",
+      description: "We design and implement revolutionary workflow automation that converts manual tasks into intelligent, self-operating systems.",
       stats: "95% efficiency boost"
     },
     {
       icon: <Network className="w-10 h-10" />,
       title: "AI Agents",
       subtitle: "LangGraph & n8n",
-      description: "Autonomous AI agents that think, decide, and act with human-level reasoning across complex workflows.",
+      description: "Our autonomous AI agents are engineered to think, decide, and act with human-like reasoning to manage complex workflows.",
       stats: "24/7 autonomous ops"
     },
     {
       icon: <Cpu className="w-10 h-10" />,
       title: "ML/DL Solutions",
       subtitle: "Custom Models",
-      description: "Cutting-edge machine learning models trained specifically for your unique business challenges and data.",
+      description: "We develop cutting-edge machine learning models that are trained on your specific business data to address your unique challenges.",
       stats: "99.7% accuracy"
     },
     {
       icon: <Database className="w-10 h-10" />,
       title: "Data Intelligence",
       subtitle: "Advanced Analytics",
-      description: "Transform raw data into strategic insights with AI-powered analytics and predictive intelligence.",
+      description: "We transform your raw data into strategic insights using AI-powered analytics and predictive intelligence to inform your business decisions.",
       stats: "Real-time insights"
+    },
+    {
+      icon: <Globe className="w-10 h-10" />,
+      title: "Web Development",
+      subtitle: "React & Node.js",
+      description: "We build modern, responsive, and scalable web applications tailored to your business needs.",
+      stats: "Global reach"
+    },
+    {
+      icon: <Smartphone className="w-10 h-10" />,
+      title: "App Development",
+      subtitle: "iOS & Android",
+      description: "We create beautiful and intuitive mobile applications for both iOS and Android platforms.",
+      stats: "Cross-platform"
+    },
+    {
+      icon: <Camera className="w-10 h-10" />,
+      title: "Computer Vision",
+      subtitle: "OpenCV & YOLO",
+      description: "We develop custom computer vision solutions for image and video analysis.",
+      stats: "Pixel-perfect"
+    },
+    {
+      icon: <Monitor className="w-10 h-10" />,
+      title: "Desktop App",
+      subtitle: "Electron & Tauri",
+      description: "We build cross-platform desktop applications with native performance and modern UI.",
+      stats: "Native experience"
     }
   ];
 
@@ -50,11 +78,10 @@ const Services = () => {
             <span className="text-sm font-semibold" style={{ color: '#AD2831' }}>💡 Our Expertise</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            AI SERVICES
+            Our Services
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            Cutting-edge AI solutions that transform businesses through intelligent automation, 
-            autonomous agents, and predictive analytics.
+            We provide a suite of advanced AI solutions, including intelligent automation, autonomous agents, and predictive analytics, to help businesses innovate and grow.
           </p>
         </div>
         

@@ -39,7 +39,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0">
-              <p>&copy; 2025 Ritorno AI. All rights reserved.</p>
+              <p>&copy; 2025 Ritorno-AI. All rights reserved.</p>
               <p className="text-sm">Founded by Syed Hashir Husnain</p>
             </div>
             

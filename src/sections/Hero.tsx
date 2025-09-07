@@ -1,11 +1,8 @@
 import { useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
-import NeuralNetwork from '../components/NeuralNetwork';
-import MatrixRain from '../components/MatrixRain';
 import Typewriter from '../components/Typewriter';
 import FloatingParticles from '../components/FloatingParticles';
-import GridTexture from '../components/GridTexture';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -16,10 +13,7 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
     >
-      <NeuralNetwork />
-      <MatrixRain />
       <FloatingParticles />
-      <GridTexture />
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="mb-12">
@@ -39,9 +33,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your operations with <span className="font-semibold" style={{ color: '#AD2831' }}>autonomous AI agents</span>, 
-            <span className="font-semibold" style={{ color: '#AD2831' }}> intelligent automation</span>, and 
-            <span className="font-semibold" style={{ color: '#AD2831' }}> custom ML solutions</span> that scale infinitely.
+            We specialize in developing autonomous AI agents, intelligent automation systems, and custom machine learning solutions that are designed to scale infinitely and meet the unique needs of your business.
           </p>
 
           <div className="flex flex-wrap justify-center gap-8 mb-12">
@@ -73,7 +65,7 @@ const Hero = () => {
             }}
           >
             <span className="relative z-10 flex items-center justify-center">
-              Get Started Now
+              Contact Us
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
 import logo from "../assets/r-logo.png"
+import NavLink from '../components/NavLink';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,6 +41,7 @@ const Navbar = () => {
                 onClick={scrollToSection}
               />
             ))}
+            <NavLink href="/">Portfolio</NavLink>
           </div>
           
           {/* Mobile Menu Button */}
@@ -62,7 +64,7 @@ const Navbar = () => {
         isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}>
         <div className="container mx-auto px-6 py-6 space-y-4">
-          {['Home', 'Services', 'About', 'Why AI', 'Testimonials', 'Contact'].map((item) => (
+          {['Home', 'Services', 'About', 'Why Choose Us', 'Testimonials', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -77,6 +79,7 @@ const Navbar = () => {
               {item}
             </button>
           ))}
+          <NavLink href="https://portfolio.ritornoai.com/">Portfolio</NavLink>
         </div>
       </div>
     </nav>
